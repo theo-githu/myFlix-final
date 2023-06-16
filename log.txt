@@ -4,3 +4,18 @@ Timestamp: Fri Jun 16 2023 19:46:29 GMT+0100 (British Summer Time)
 URL: /favicon.ico
 Timestamp: Fri Jun 16 2023 19:46:29 GMT+0100 (British Summer Time)
 
+::ffff:127.0.0.1 - - [16/Jun/2023:19:03:34 +0000] "GET / HTTP/1.1" 200 24 "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::ffff:127.0.0.1 - - [16/Jun/2023:19:03:34 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://127.0.0.1:8080/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::ffff:127.0.0.1 - - [16/Jun/2023:19:05:17 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::ffff:127.0.0.1 - - [16/Jun/2023:19:05:24 +0000] "GET /movies HTTP/1.1" 200 179 "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::ffff:127.0.0.1 - - [16/Jun/2023:19:05:52 +0000] "GET /documentation.html HTTP/1.1" 404 157 "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::ffff:127.0.0.1 - - [16/Jun/2023:19:06:21 +0000] "GET /documentation.html HTTP/1.1" 404 157 "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::ffff:127.0.0.1 - - [16/Jun/2023:20:28:42 +0000] "GET /documentation.html HTTP/1.1" 200 4374 "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::ffff:127.0.0.1 - - [16/Jun/2023:20:28:42 +0000] "GET /css/styles.css HTTP/1.1" 404 153 "http://127.0.0.1:8080/documentation.html" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::ffff:127.0.0.1 - - [16/Jun/2023:20:28:54 +0000] "GET /movies HTTP/1.1" 200 152 "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::ffff:127.0.0.1 - - [16/Jun/2023:20:29:00 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
+::1 - - [16/Jun/2023:20:33:18 +0000] "GET /movies HTTP/1.1" 200 152 "-" "PostmanRuntime/7.32.2"
+::1 - - [16/Jun/2023:20:38:45 +0000] "GET /movies/Harry%20Potter HTTP/1.1" 404 160 "-" "PostmanRuntime/7.32.2"
+::1 - - [16/Jun/2023:20:38:55 +0000] "GET /movies/Harry20%Potter HTTP/1.1" 404 162 "-" "PostmanRuntime/7.32.2"
+::1 - - [16/Jun/2023:20:39:25 +0000] "GET /movies/Harry%20Potter HTTP/1.1" 404 160 "-" "PostmanRuntime/7.32.2"
+::1 - - [16/Jun/2023:20:39:49 +0000] "GET /movies/Harry%20Potter HTTP/1.1" 404 160 "-" "PostmanRuntime/7.32.2"
