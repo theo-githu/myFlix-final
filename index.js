@@ -16,7 +16,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const cors = require('cors');
-let allowedOrigins = ['http://localhost:8080', 'http://testsite.com'];
+let allowedOrigins = [
+    'http://localhost:8080', 
+    'https://movieflix.herokuapp.com/',
+    'http://localhost:1234'
+];
 
 app.use(cors({
   origin: (origin, callback) => {
@@ -39,7 +43,10 @@ const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {f
 app.use(morgan('combined', {stream: accessLogStream}));
 app.use(express.static('public'));
 
-mongoose.connect('mongodb://localhost:27017/myFlixDB', 
+// mongoose.connect('mongodb://localhost:27017/myFlixDB', 
+// { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connect(process.env.CONNECTION_URI, 
 { useNewUrlParser: true, useUnifiedTopology: true });
 
 const { check, validationResult } = require('express-validator');
