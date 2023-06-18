@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const cors = require('cors');
 let allowedOrigins = [
     'http://localhost:8080', 
-    'https://movieflix.herokuapp.com/',
+    'https://movieflix-899d9c6c8969.herokuapp.com/',
     'http://localhost:1234'
 ];
 
