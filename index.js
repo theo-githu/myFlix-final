@@ -1,3 +1,4 @@
+// Integrating Mongoose and connecting to MongoDB
 const mongoose = require('mongoose');
 const Models = require('./models.js');
 
@@ -14,6 +15,7 @@ const express = require('express'),
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 const cors = require('cors');
 let allowedOrigins = [
@@ -33,22 +35,23 @@ app.use(cors({
   }
 }));
 
+// Authentication (auth.js is handling login endpoint and generating JWT tokens)
 let auth = require('./auth')(app);
-
 const passport = require('passport');
 require('./passport');
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {flags: 'a'})
 
+/**
+ * Morgan is a HTTP request logger middleware for Node.js.
+ */
 app.use(morgan('combined', {stream: accessLogStream}));
 app.use(express.static('public'));
-
-// mongoose.connect('mongodb://localhost:27017/myFlixDB', 
-// { useNewUrlParser: true, useUnifiedTopology: true });
 
 mongoose.connect(process.env.CONNECTION_URI, 
 { useNewUrlParser: true, useUnifiedTopology: true });
 
+// Input validation
 const { check, validationResult } = require('express-validator');
 
 app.use((err, req, res, next) => {
@@ -56,6 +59,13 @@ app.use((err, req, res, next) => {
     res.status(500).send('Something broke!');
 });
 
+/**
+ * Endpoint logic
+ * @method GET
+ * @param {string} endpoint - /users
+ * @param {function} callback - function(req, res)
+ * @returns {object} - JSON object containing all users
+ */
 
 app.get('/', (req, res) => {
     res.send('Welcome to myFlix');
