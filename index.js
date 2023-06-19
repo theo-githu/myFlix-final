@@ -22,7 +22,7 @@ let allowedOrigins = [
     'http://localhost:8080', 
     'https://movieflix-899d9c6c8969.herokuapp.com/',
     'http://localhost:1234',
-    'http://localhost:4200'
+    'http://localhost:4200',
 ];
 
 app.use(cors({
